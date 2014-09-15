@@ -1,4 +1,4 @@
-package objects;
+package tk.socialstu.objects;
 
 import static org.junit.Assert.*;
 
@@ -33,6 +33,7 @@ public class LaptopBagTest {
 		LaptopBag bag = new LaptopBag();
 		bag.contents=lappy;
 		System.out.println(bag);
+		
 	}
 
 }
