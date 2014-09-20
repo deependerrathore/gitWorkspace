@@ -8,13 +8,7 @@ public class LaptopBagTest {
 
 	@Test
 	public void test() {
-		Memory m1 = new Memory(8,"DIMM"), m2 = new Memory(8,"DIMM");
-		
-		assertFalse(m1 == m2);
-		assertTrue(m1.equals(m2));
-		
-		
-		Memory[] memory = {m1,m2};
+		Memory[] memory = {new Memory(8,"DIMM"),new Memory(8,"DIMM")};
 //		memory[0].setType("DIMM");
 //		memory[0].setSize(8);
 //		memory[1].setType("DIMM");

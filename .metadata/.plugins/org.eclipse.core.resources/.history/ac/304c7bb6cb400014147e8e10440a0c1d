@@ -6,14 +6,13 @@ public class Laptop {
 	private final Memory[] memory;
 	private final Disk[] disk;
 	private boolean on;
-	private String[] applications;
-	
 	public Laptop(String model, int size, Memory[] memory, Disk[] disk) {
 		this.model = model;
 		this.size = size;
 		this.memory = memory;
 		this.disk = disk;
 	}
+	private String[] applications;
 	
 	public String getModel() {
 		return model;

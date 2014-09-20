@@ -1,0 +1,22 @@
+package tk.socialstu.objects;
+
+public class Memory {
+	private final int size;	//size of the memory
+	private final String type;//type of the memory
+	public Memory(int size, String type) {
+		this.size = size;
+		this.type = type;
+	}
+	
+	public int getSize() {
+		return this.size;
+	}
+	
+	public String getType() {
+		return this.type;
+	}
+
+	
+
+
+}

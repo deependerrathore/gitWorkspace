@@ -13,7 +13,7 @@ public class LaptopBagTest {
 		assertFalse(m1 == m2);
 		assertTrue(m1.equals(m2));
 		
-		
+		m1.equals(10);
 		Memory[] memory = {m1,m2};
 //		memory[0].setType("DIMM");
 //		memory[0].setSize(8);
