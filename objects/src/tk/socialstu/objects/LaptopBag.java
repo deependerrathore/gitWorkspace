@@ -1,5 +1,30 @@
 package tk.socialstu.objects;
 
 public class LaptopBag {
-	Laptop contents;
+	private int size;
+	private Laptop laptop; 
+	
+	public void insertLaptop(Laptop laptop){
+		//TODO: check reconditions :
+		//	-laptop isn't too big(IAE)
+		//	-bag doesn't already contain a laptop(ISE)
+		if(laptop.getSize() > size){
+			throw new IllegalArgumentException("laptop too big");
+		}
+		if(this.laptop != null){
+			throw new IllegalStateException("bag already contain a laptop");
+		}
+		
+		this.laptop = laptop;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+	
+	
 }

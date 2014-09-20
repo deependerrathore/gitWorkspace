@@ -9,30 +9,32 @@ public class LaptopBagTest {
 	@Test
 	public void test() {
 		Laptop lappy = new Laptop();
-		lappy.model ="Macbook Pro";
-		lappy.size=15;
+		lappy.setModel("Macbook Pro");
+		lappy.setSize(17);
 		Memory[] memory = {new Memory(),new Memory()};
-		memory[0].size = 8;
-		memory[0].type = "DIMM";
-		memory[1].size = 8;
-		memory[1].type ="DIMM";
+		memory[0].setType("DIMM");
+		memory[0].setSize(8);
+		memory[1].setType("DIMM");
+		memory[1].setSize(8);
 		
-		lappy.memory = memory;
-		lappy.memory[0].size =10;
-		System.out.println(memory[0].size);
+		lappy.setMemory(memory);
 		
 		Disk[] disks = {new Disk(),new Disk()};
 		
-		disks[0].size =1024;
-		disks[0].type="HDD";
-		disks[1].size = 512;
-		disks[1].type = "SSD";
+		disks[0].setSize(1024);
+		disks[0].setType("HDD");
+		disks[1].setSize(1024);
+		disks[2].setType("HDD");
 		
-		lappy.disk = disks;
+		lappy.setDisk(disks);
+		lappy.turnOn();
 		
 		LaptopBag bag = new LaptopBag();
-		bag.contents=lappy;
+		bag.setSize(15);
+		bag.insertLaptop(lappy);
+		
 		System.out.println(bag);
+		
 		
 	}
 

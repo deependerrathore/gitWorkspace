@@ -1,0 +1,18 @@
+package tk.socialstu.objects;
+
+public class Laptop {
+	private String model;
+	private Memory[] memory;
+	private Disk[] disk;
+	private int size;
+	private boolean on;
+	private String[] applications;
+	
+	public void turnOn(){
+		on = true;
+	}
+	
+	public void turnOff(){
+		on = false;
+	}
+}

@@ -1,0 +1,7 @@
+package tk.socialstu.objects;
+
+public class LaptopBag {
+	int size;
+	Laptop contents; 
+	
+}
