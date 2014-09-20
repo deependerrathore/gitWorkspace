@@ -8,7 +8,7 @@ public class LaptopBagTest {
 
 	@Test
 	public void test() {
-		Memory[] memory = {new Memory(8,"DIMM"),new Memory(8,"DIMM")};
+		Memory[] memory = {new Memory(8,"DDR3"),new Memory(8,"DDR3")};
 //		memory[0].setType("DIMM");
 //		memory[0].setSize(8);
 //		memory[1].setType("DIMM");

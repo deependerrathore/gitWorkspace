@@ -8,13 +8,16 @@ public class LaptopBagTest {
 
 	@Test
 	public void test() {
-		Memory[] memory = {new Memory(8,"DIMM"),new Memory(8,"DIMM")};
+		Laptop lappy = new Laptop();
+		lappy.setModel("Macbook Pro");
+		lappy.setSize(14);
+		Memory[] memory = {new Memory(8,"DDR3"),new Memory(8,"DDR3")};
 //		memory[0].setType("DIMM");
 //		memory[0].setSize(8);
 //		memory[1].setType("DIMM");
 //		memory[1].setSize(8);
 		
-//		lappy.setMemory(memory);
+		lappy.setMemory(memory);
 		
 		Disk[] disks = {new Disk(512,"SATA"),new Disk(1024,"SATA")};
 		
@@ -23,12 +26,11 @@ public class LaptopBagTest {
 //		disks[1].setSize(1024);
 //		disks[1].setType("HDD");
 //		
-//		lappy.setDisk(disks);
-		Laptop lappy = new Laptop("Macbook Pro",15 ,memory,disks);
-		
+		lappy.setDisk(disks);
 		lappy.turnOn();
 		
-		LaptopBag bag = new LaptopBag(15);
+		LaptopBag bag = new LaptopBag();
+		bag.setSize(15);
 		bag.insertLaptop(lappy);
 		
 		System.out.println(bag);

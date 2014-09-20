@@ -1,12 +1,8 @@
 package tk.socialstu.objects;
 
 public class LaptopBag {
-	private final int size;
+	private int size = 15;
 	private Laptop laptop; 
-	
-	public LaptopBag(int size) {
-		this.size = size;
-	}
 	
 	public void insertLaptop(Laptop laptop){
 		//TODO: check reconditions :
@@ -23,12 +19,13 @@ public class LaptopBag {
 		this.laptop = laptop;
 	}
 
-	public Laptop getLaptop(){
-		return laptop;
-	}
 	public int getSize() {
 		return size;
 	}
 
-
+	public void setSize(int size) {
+		this.size = size; 
+	}
+	
+	
 }

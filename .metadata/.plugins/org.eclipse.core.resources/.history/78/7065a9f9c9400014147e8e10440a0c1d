@@ -23,9 +23,6 @@ public class LaptopBag {
 		this.laptop = laptop;
 	}
 
-	public Laptop getLaptop(){
-		return laptop;
-	}
 	public int getSize() {
 		return size;
 	}

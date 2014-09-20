@@ -4,10 +4,6 @@ public class LaptopBag {
 	private final int size;
 	private Laptop laptop; 
 	
-	public LaptopBag(int size) {
-		this.size = size;
-	}
-	
 	public void insertLaptop(Laptop laptop){
 		//TODO: check reconditions :
 		//	-laptop isn't too big(IAE)
@@ -23,12 +19,8 @@ public class LaptopBag {
 		this.laptop = laptop;
 	}
 
-	public Laptop getLaptop(){
-		return laptop;
-	}
 	public int getSize() {
 		return size;
 	}
-
 
 }
