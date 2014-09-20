@@ -1,5 +1,5 @@
 package tk.socialstu.objects;
-//Test class of JUnit
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
