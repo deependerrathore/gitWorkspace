@@ -1,7 +1,7 @@
 package tk.socialstu.objects;
 
 public class LaptopBag {
-	private int size;
+	private int size = 15;
 	private Laptop laptop; 
 	
 	public void insertLaptop(Laptop laptop){
@@ -9,6 +9,7 @@ public class LaptopBag {
 		//	-laptop isn't too big(IAE)
 		//	-bag doesn't already contain a laptop(ISE)
 		if(laptop.getSize() > size){
+			System.out.println("deep");
 			throw new IllegalArgumentException("laptop too big");
 		}
 		if(this.laptop != null){
@@ -23,7 +24,7 @@ public class LaptopBag {
 	}
 
 	public void setSize(int size) {
-		this.size = size;
+		this.size = size; 
 	}
 	
 	

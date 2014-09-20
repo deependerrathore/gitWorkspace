@@ -4,7 +4,7 @@ public class Laptop {
 	private String model;
 	private Memory[] memory;
 	private Disk[] disk;
-	private int size;
+	private int size = 17;
 	private boolean on;
 	private String[] applications;
 	

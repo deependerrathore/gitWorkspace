@@ -24,7 +24,7 @@ public class LaptopBagTest {
 		disks[0].setSize(1024);
 		disks[0].setType("HDD");
 		disks[1].setSize(1024);
-		disks[2].setType("HDD");
+		disks[1].setType("HDD");
 		
 		lappy.setDisk(disks);
 		lappy.turnOn();
