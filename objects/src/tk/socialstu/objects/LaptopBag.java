@@ -10,7 +10,7 @@ public class LaptopBag {
 		//	-bag doesn't already contain a laptop(ISE)
 		if(laptop.getSize() > size){
 			System.out.println("deep");
-			throw new IllegalArgumentException("laptop too big");
+			throw new IllegalArgumentException("laptop too big to be put in laptop bag");
 		}
 		if(this.laptop != null){
 			throw new IllegalStateException("bag already contain a laptop");

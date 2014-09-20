@@ -10,7 +10,7 @@ public class LaptopBagTest {
 	public void test() {
 		Laptop lappy = new Laptop();
 		lappy.setModel("Macbook Pro");
-		lappy.setSize(17);
+		lappy.setSize(14);
 		Memory[] memory = {new Memory(),new Memory()};
 		memory[0].setType("DIMM");
 		memory[0].setSize(8);

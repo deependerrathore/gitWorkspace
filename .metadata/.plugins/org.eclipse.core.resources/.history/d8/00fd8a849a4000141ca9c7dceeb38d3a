@@ -1,6 +1,0 @@
-package tk.socialstu.objects;
-
-public class Memory {
-	private int size;
-	private String type;
-}
