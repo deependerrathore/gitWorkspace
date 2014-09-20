@@ -19,13 +19,13 @@ public class LaptopBagTest {
 		
 		lappy.setMemory(memory);
 		
-		Disk[] disks = {new Disk(512,"SATA"),new Disk(1024,"SATA")};
+		Disk[] disks = {new Disk(),new Disk()};
 		
-//		disks[0].setSize(1024);
-//		disks[0].setType("HDD");
-//		disks[1].setSize(1024);
-//		disks[1].setType("HDD");
-//		
+		disks[0].setSize(1024);
+		disks[0].setType("HDD");
+		disks[1].setSize(1024);
+		disks[1].setType("HDD");
+		
 		lappy.setDisk(disks);
 		lappy.turnOn();
 		

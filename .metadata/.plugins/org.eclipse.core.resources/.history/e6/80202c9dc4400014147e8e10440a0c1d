@@ -4,11 +4,6 @@ public class Disk {
 	private final int size;	//size of the disk
 	private final String type;//type of the disk like SSD ,HDD
 	
-	public Disk(int size, String type) {
-		this.size = size;
-		this.type = type;
-	}
-	
 	public int getSize() {
 		return size;
 	}
@@ -16,6 +11,5 @@ public class Disk {
 	public String getType() {
 		return type;
 	}
-
 	
 }
