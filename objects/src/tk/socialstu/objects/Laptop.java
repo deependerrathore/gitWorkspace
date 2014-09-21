@@ -5,16 +5,15 @@ import java.util.Arrays;
 public class Laptop {
 	private final String model;
 	private final int size;
-	private final Memory[] memory;
-	private final Disk[] disk;
+	private final Storage[] storage;
 	private boolean on;
 	private String[] applications;
 	
-	public Laptop(String model, int size, Memory[] memory, Disk[] disk) {
+	public Laptop(String model, int size, Storage[] storage) {
 		this.model = model;
 		this.size = size;
-		this.memory = memory;
-		this.disk = disk;
+		this.storage = storage;
+		
 	}
 	
 	public String getModel() {
@@ -23,14 +22,11 @@ public class Laptop {
 
 	
 
-	public Memory[] getMemory() {
-		return memory;
+	public Storage[] getStorage() {
+		return storage;
 	}
 
 	
-	public Disk[] getDisk() {
-		return disk;
-	}
 
 	
 	public int getSize() {
@@ -46,14 +42,14 @@ public class Laptop {
 		this.applications = applications;
 	}
 
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Arrays.hashCode(disk);
-		result = prime * result + Arrays.hashCode(memory);
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
 		result = prime * result + size;
+		result = prime * result + Arrays.hashCode(storage);
 		return result;
 	}
 
@@ -66,16 +62,14 @@ public class Laptop {
 		if (getClass() != obj.getClass())
 			return false;
 		Laptop other = (Laptop) obj;
-		if (!Arrays.equals(disk, other.disk))
-			return false;
-		if (!Arrays.equals(memory, other.memory))
-			return false;
 		if (model == null) {
 			if (other.model != null)
 				return false;
 		} else if (!model.equals(other.model))
 			return false;
 		if (size != other.size)
+			return false;
+		if (!Arrays.equals(storage, other.storage))
 			return false;
 		return true;
 	}
@@ -89,5 +83,10 @@ public class Laptop {
 	}
 	public boolean isOn(){
 		return on;
+	}
+	
+	public int totalStorage(){
+		
+		return 0;
 	}
 }
