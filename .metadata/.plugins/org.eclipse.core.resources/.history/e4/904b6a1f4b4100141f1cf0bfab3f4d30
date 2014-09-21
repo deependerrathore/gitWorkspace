@@ -1,6 +1,6 @@
 package tk.socialstu.objects;
 
-public class Memory implements Storage{
+public class Memory {
 	private final int size;	//size of the memory
 	private final String type;//type of the memory
 	public Memory(int size, String type) {

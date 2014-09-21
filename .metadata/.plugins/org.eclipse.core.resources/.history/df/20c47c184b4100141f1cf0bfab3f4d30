@@ -1,0 +1,17 @@
+package tk.socialstu.objects;
+//This is the disk class
+public class Disk implements Storage {
+
+	@Override
+	public int getSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

@@ -1,0 +1,5 @@
+package tk.socialstu.objects;
+
+public interface Storage {
+
+}

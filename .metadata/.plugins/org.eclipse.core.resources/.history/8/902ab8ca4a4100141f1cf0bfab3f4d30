@@ -1,19 +1,21 @@
 package tk.socialstu.objects;
+//This is the disk class
+public class Disk {
 
-public class Memory implements Storage{
-	private final int size;	//size of the memory
-	private final String type;//type of the memory
-	public Memory(int size, String type) {
+	private final int size;	//size of the disk
+	private final String type;//type of the disk like SSD ,HDD
+	
+	public Disk(int size, String type) {
 		this.size = size;
 		this.type = type;
 	}
 	
 	public int getSize() {
-		return this.size;
+		return size;
 	}
 	
 	public String getType() {
-		return this.type;
+		return type;
 	}
 
 	@Override
@@ -24,7 +26,7 @@ public class Memory implements Storage{
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -33,7 +35,7 @@ public class Memory implements Storage{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Memory other = (Memory) obj;
+		Disk other = (Disk) obj;
 		if (size != other.size)
 			return false;
 		if (type == null) {
@@ -43,8 +45,5 @@ public class Memory implements Storage{
 			return false;
 		return true;
 	}
-
 	
-
-
 }
