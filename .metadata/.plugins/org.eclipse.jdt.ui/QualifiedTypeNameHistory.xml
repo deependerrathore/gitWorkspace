@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="tk.socialstu.calculator.operator.Add"/>
+<fullyQualifiedTypeName name="tk.socialstu.calculator.operator.Subtract"/>
+<fullyQualifiedTypeName name="tk.socialstu.calculator.operator.Multiply"/>
+<fullyQualifiedTypeName name="tk.socialstu.calculator.operator.Divide"/>
+</qualifiedTypeNameHistroy>

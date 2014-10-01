@@ -1,15 +1,16 @@
 package tk.socialstu.objects;
 
-import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 
 public class Laptop {
 	private final String model;
 	private final int size;
-	private final Storage[] storage;
+	private final List<Storage> storage;
 	private boolean on;
-	private String[] applications;
+	private Set<String> applications;
 	
-	public Laptop(String model, int size, Storage[] storage) {
+	public Laptop(String model, int size, List<Storage> storage) {
 		this.model = model;
 		this.size = size;
 		this.storage = storage;
@@ -22,7 +23,7 @@ public class Laptop {
 
 	
 
-	public Storage[] getStorage() {
+	public List<Storage> getStorage() {
 		return storage;
 	}
 
@@ -34,22 +35,24 @@ public class Laptop {
 	}
 
 
-	public String[] getApplications() {
+	public Set<String> getApplications() {
 		return applications;
 	}
 
-	public void setApplications(String[] applications) {
+	public void setApplications(Set<String> applications) {
 		this.applications = applications;
 	}
 
 	
+	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
 		result = prime * result + size;
-		result = prime * result + Arrays.hashCode(storage);
+		result = prime * result + ((storage == null) ? 0 : storage.hashCode());
 		return result;
 	}
 
@@ -69,7 +72,10 @@ public class Laptop {
 			return false;
 		if (size != other.size)
 			return false;
-		if (!Arrays.equals(storage, other.storage))
+		if (storage == null) {
+			if (other.storage != null)
+				return false;
+		} else if (!storage.equals(other.storage))
 			return false;
 		return true;
 	}
@@ -86,7 +92,10 @@ public class Laptop {
 	}
 	
 	public int totalStorage(){
-		
-		return 0;
+		int total  = 0;
+		for(Storage s : storage){
+			total += s.getSize();
+		}
+		return total;
 	}
 }

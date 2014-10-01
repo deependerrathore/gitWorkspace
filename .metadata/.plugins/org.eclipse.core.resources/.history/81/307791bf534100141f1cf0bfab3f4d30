@@ -1,0 +1,5 @@
+package tk.socialstu.calculator;
+
+public interface Operator {
+
+}

@@ -9,7 +9,7 @@ public class Memory implements Storage{
 	}
 	
 	public int getSize() {
-		return this.size;
+		return this.size/1024;
 	}
 	
 	public String getType() {

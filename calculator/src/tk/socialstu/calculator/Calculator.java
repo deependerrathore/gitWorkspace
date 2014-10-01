@@ -2,6 +2,12 @@ package tk.socialstu.calculator;
 
 import java.util.Stack;
 
+import tk.socialstu.calculator.operator.Add;
+import tk.socialstu.calculator.operator.Divide;
+import tk.socialstu.calculator.operator.Multiply;
+import tk.socialstu.calculator.operator.Operator;
+import tk.socialstu.calculator.operator.Subtract;
+
 public class Calculator {
 
 	/**
@@ -61,35 +67,34 @@ public class Calculator {
 	public static boolean handleOperator(Stack<Integer> stack, String token)
 			throws IllegalAccessError {
 		// popping out the values from the stack to perform operation
-
-		switch (token) {
+		Operator op;
+		switch (token) {	
 		case "+": {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs + rhs);
+			op = new Add();
 			break;
 		}
 
 		case "-": {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs - rhs);
+			op = new Subtract();
 			break;
 		}
 
 		case "*": {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs * rhs);
+			op = new Multiply();
 			break;
 		}
 
 		case "/": {
-			int rhs = stack.pop(), lhs = stack.pop();
-			stack.push(lhs / rhs);
+			op = new Divide();
 			break;
 		}
 
 		default:
 			return false;
 		}
+		
+		int rhs = stack.pop(), lhs = stack.pop();
+		stack.push(op.operate(lhs, rhs));
 		return true;
 	}
 

@@ -1,0 +1,89 @@
+package tk.socialstu.objects;
+
+import java.util.Arrays;
+
+public class Laptop {
+	private final String model;
+	private final int size;
+	private final Storage[] storage;
+	private boolean on;
+	private String[] applications;
+	
+	public Laptop(String model, int size, Storage[] storage) {
+		this.model = model;
+		this.size = size;
+		this.storage = storage;
+		
+	}
+	
+	public String getModel() {
+		return model;
+	}
+
+	
+
+	public Storage[] getStorage() {
+		return storage;
+	}
+
+	
+
+	
+	public int getSize() {
+		return size;
+	}
+
+
+	public String[] getApplications() {
+		return applications;
+	}
+
+	public void setApplications(String[] applications) {
+		this.applications = applications;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(disk);
+		result = prime * result + Arrays.hashCode(memory);
+		result = prime * result + ((model == null) ? 0 : model.hashCode());
+		result = prime * result + size;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Laptop other = (Laptop) obj;
+		if (!Arrays.equals(disk, other.disk))
+			return false;
+		if (!Arrays.equals(memory, other.memory))
+			return false;
+		if (model == null) {
+			if (other.model != null)
+				return false;
+		} else if (!model.equals(other.model))
+			return false;
+		if (size != other.size)
+			return false;
+		return true;
+	}
+
+	public void turnOn(){
+		on = true;
+	}
+	
+	public void turnOff(){
+		on = false;
+	}
+	public boolean isOn(){
+		return on;
+	}
+}

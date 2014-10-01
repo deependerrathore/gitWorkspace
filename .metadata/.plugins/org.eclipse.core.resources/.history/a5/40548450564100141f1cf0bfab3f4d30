@@ -1,0 +1,13 @@
+package tk.socialstu.calculator;
+
+import tk.socialstu.calculator.Operator;
+
+public class Add implements Operator {
+
+	@Override
+	public int operate(int lhs, int rhs) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
