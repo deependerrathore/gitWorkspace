@@ -1,5 +1,8 @@
 package tk.socialstu.objects;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -8,12 +11,13 @@ public class Laptop {
 	private final int size;
 	private final List<Storage> storage;
 	private boolean on;
-	private Set<String> applications;
+	private final Set<String> applications = new HashSet<String>();
 	
 	public Laptop(String model, int size, List<Storage> storage) {
 		this.model = model;
 		this.size = size;
-		this.storage = storage;
+		this.storage = new ArrayList<Storage>(storage);
+		
 		
 	}
 	
@@ -24,7 +28,7 @@ public class Laptop {
 	
 
 	public List<Storage> getStorage() {
-		return storage;
+		return Collections.unmodifiableList(storage);
 	}
 
 	
@@ -36,16 +40,17 @@ public class Laptop {
 
 
 	public Set<String> getApplications() {
-		return applications;
-	}
-
-	public void setApplications(Set<String> applications) {
-		this.applications = applications;
+		return Collections.unmodifiableSet(applications);
 	}
 
 	
-	
 
+	public void installApplication(String application){
+		applications.add(application);
+	}
+	public void uninstallApplication(String application){
+		applications.remove(application);
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;

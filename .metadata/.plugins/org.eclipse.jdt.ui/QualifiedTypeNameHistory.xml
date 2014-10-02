@@ -4,4 +4,7 @@
 <fullyQualifiedTypeName name="tk.socialstu.calculator.operator.Subtract"/>
 <fullyQualifiedTypeName name="tk.socialstu.calculator.operator.Multiply"/>
 <fullyQualifiedTypeName name="tk.socialstu.calculator.operator.Divide"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
 </qualifiedTypeNameHistroy>

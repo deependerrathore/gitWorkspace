@@ -1,0 +1,9 @@
+package tk.socialstu.objects;
+//This is the disk class
+public class Disk implements Storage {
+
+	public int getSize() {
+		return size;
+	}
+	
+}

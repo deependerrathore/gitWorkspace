@@ -22,9 +22,9 @@ public class LaptopBagTest {
 		storageList.add(new Disk(512,"SATA"));
 		Laptop lappy = new Laptop("Macbook Pro", 15, storageList);
 		Set<String> applications = new HashSet<String>();
-		applications.add("Eclispse");
-		applications.add("bit Torrent");
-		lappy.setApplications(applications);
+		
+		lappy.installApplication("Eclipse");
+		lappy.installApplication("Bit Torrent");
 		assertEquals(520 , lappy.totalStorage());
 		lappy.turnOn();
 

@@ -1,0 +1,14 @@
+package tk.socialstu.objects;
+//This is the disk class
+public class Disk extends Storage {
+
+	
+	public Disk(int size, String type) {
+		super(size, type);
+	}
+
+	public int getSize() {
+		return size;
+	}
+	
+}
