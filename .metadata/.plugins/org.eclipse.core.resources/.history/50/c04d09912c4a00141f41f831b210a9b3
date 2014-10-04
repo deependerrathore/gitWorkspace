@@ -1,0 +1,13 @@
+package tk.socialstu.objects;
+
+import java.util.List;
+
+public class Desktop extends Computer{
+	private final String formFoctor;
+	public Desktop(String model, List<Storage> storage , String formFactor) {
+		super(model, storage);
+		this.formFoctor = formFactor;
+		// TODO Auto-generated constructor stub
+	}
+
+}

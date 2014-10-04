@@ -4,9 +4,7 @@ package tk.socialstu.objects;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.junit.Test;
 
@@ -19,9 +17,8 @@ public class LaptopBagTest {
 		List<Storage> storageList = new ArrayList<Storage>();
 		storageList.add(new Memory(4096,"DIMM"));
 		storageList.add(new Memory(4096,"DIMM"));
-		storageList.add(new Disk(512,"SATA"));
+		storageList.add(new Disk(512,"PATA",5400));
 		Laptop lappy = new Laptop("Macbook Pro", 15, storageList);
-		Set<String> applications = new HashSet<String>();
 		
 		lappy.installApplication("Eclipse");
 		lappy.installApplication("Bit Torrent");
